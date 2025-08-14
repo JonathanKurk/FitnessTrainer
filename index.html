@@ -1,0 +1,111 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Trainer Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="importmap">
+        {
+            "imports": {
+                "workouts": "./workouts.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Fitness Trainer Pro</h1>
+            <p class="subtitle">Professionelles Training für jeden Level</p>
+        </header>
+
+        <div class="workout-selection" id="selection-screen">
+            <div class="filter-section">
+                <h2>Finde dein perfektes Training</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Level:</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="level" data-value="all">Alle</button>
+                            <button class="filter-btn" data-filter="level" data-value="Anfänger">Anfänger</button>
+                            <button class="filter-btn" data-filter="level" data-value="Fortgeschritten">Fortgeschritten</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Zielbereich:</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="target" data-value="all">Alle</button>
+                            <button class="filter-btn" data-filter="target" data-value="Oberkörper">Oberkörper</button>
+                            <button class="filter-btn" data-filter="target" data-value="Bauch">Bauch</button>
+                            <button class="filter-btn" data-filter="target" data-value="Ganzkörper">Ganzkörper</button>
+                            <button class="filter-btn" data-filter="target" data-value="Beine">Beine</button>
+                            <button class="filter-btn" data-filter="target" data-value="Arme">Arme</button>
+                        </div>
+                    </div>
+                    <div class="filter-group filter-group-time">
+                        <label>Max. Dauer:</label>
+                        <div class="filter-time-slider">
+                            <input type="range" id="duration-slider" min="5" max="60" value="60" step="5">
+                            <span id="duration-value">60 Min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workout-grid" id="workout-grid">
+                <!-- Workout cards will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="workout-session" id="workout-screen" style="display: none;">
+            <div class="session-header">
+                <button class="back-btn" id="back-to-selection">← Zurück zur Auswahl</button>
+                <div class="workout-info">
+                    <h2 id="workout-title"></h2>
+                    <div class="workout-meta">
+                        <span id="workout-level" class="badge"></span>
+                        <span id="workout-target" class="badge"></span>
+                        <span id="workout-duration" class="badge"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-section">
+                <div class="timer-display">
+                    <div id="timer">00:00</div>
+                    <div class="timer-label" id="timer-label">Bereit</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="exercise-info">
+                <div class="current-exercise">
+                    <h3 id="current-step-name"></h3>
+                    <p id="current-instruction"></p>
+                </div>
+                
+                <div class="exercise-explanation" id="exercise-explanation">
+                    <!-- Exercise explanation will be populated here -->
+                </div>
+
+                <div class="progress-info">
+                    <span id="progress-indicator"></span>
+                    <span id="next-exercise"></span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn-primary" disabled>Training starten</button>
+                <button id="pause-resume-btn" class="btn-secondary" disabled>Pause</button>
+                <button id="skip-btn" class="btn-secondary" disabled>Überspringen</button>
+                <button id="reset-btn" class="btn-outline" disabled>Neustarten</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

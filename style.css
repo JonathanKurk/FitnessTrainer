@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05)),
+                linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05));
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.app-header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.app-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #e2e8f0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.workout-selection {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.filter-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-transform: capitalize;
+}
+
+.filter-btn:hover {
+    border-color: #1e293b;
+    color: #1e293b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #1e293b;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(30, 41, 59, 0.25);
+}
+
+.filter-group-time {
+    min-width: 200px; /* Ensure slider has enough space */
+}
+
+.filter-time-slider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.filter-time-slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.filter-time-slider input[type="range"]:hover {
+    opacity: 1;
+}
+
+.filter-time-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.3);
+    border: 2px solid white;
+}
+
+.filter-time-slider input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.3);
+    border: 2px solid white;
+}
+
+.filter-time-slider #duration-value {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    min-width: 60px; /* Ensure consistent width for text */
+    text-align: right;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.workout-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.workout-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: #1e293b;
+}
+
+.workout-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.workout-card .card-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #1e293b;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.workout-card .description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.workout-card .exercises-preview {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.workout-session {
+    flex: 1;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.session-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid #cbd5e1;
+    padding: 0.875rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #475569;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    border-color: #94a3b8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.workout-info {
+    flex: 1;
+}
+
+.workout-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.workout-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.timer-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.timer-display {
+    margin-bottom: 1rem;
+}
+
+#timer {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#timer.warning {
+    color: #f59e0b;
+}
+
+#timer.danger {
+    color: #ef4444;
+}
+
+.timer-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1e293b 0%, #334155 50%, #475569 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.exercise-info {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+}
+
+.exercise-info.exercise-active {
+    border-color: #1e293b;
+    box-shadow: 0 8px 30px rgba(30, 41, 59, 0.15);
+}
+
+.exercise-info.rest-active {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+.current-exercise h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.step-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.step-icon.exercise {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.25);
+}
+
+.step-icon.rest {
+    background: #10b981;
+    color: white;
+}
+
+.current-exercise p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-explanation {
+    background: #f8f9ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-explanation h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.exercise-explanation ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exercise-explanation li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.exercise-explanation li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.progress-indicator-main {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+.next-exercise-preview {
+    color: #666;
+    font-style: italic;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+.controls button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 41, 59, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #475569;
+    border: 2px solid #cbd5e1;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    border-color: #94a3b8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(71, 85, 105, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1e293b;
+    border: 2px solid #1e293b;
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 41, 59, 0.3);
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .app-header h1 {
+        font-size: 2rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filter-time-slider {
+        justify-content: center;
+    }
+    
+    .workout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #timer {
+        font-size: 3rem;
+    }
+    
+    .session-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .controls button {
+        min-width: auto;
+        width: 100%;
+    }
+}
