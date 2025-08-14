@@ -1,16 +1,17 @@
 const CACHE_NAME = 'fitness-trainer-pro-v1';
 // Alle Dateien, die für den Offline-Betrieb benötigt werden
 const URLS_TO_CACHE = [
-    '/',
-    'index.html',
-    'style.css',
-    'script.js',
-    'workouts.js',
-    'manifest.json',
-    'icons/icon-192x192.png',
-    'icons/icon-512x512.png',
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-    'https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2' // Beachten: Dies ist ein Beispiel für die Schriftart-Datei. Die URL kann sich ändern.
+    './', // <-- WICHTIG: Sagt "starte im aktuellen Verzeichnis"
+    './index.html',
+    './style.css',
+    './script.js',
+    './workouts.js',
+    './manifest.json',
+    './icons/icon-192x192.png',
+    './icons/icon-512x512.png',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+    // Die spezifische .woff2 Datei entfernen wir, da sie sich ändern kann.
+    // Das Cachen der CSS-Datei ist sicherer und meist ausreichend.
 ];
 
 // 1. Installation: Öffnet den Cache und fügt die Dateien hinzu
