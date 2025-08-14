@@ -922,3 +922,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- PWA Installation Prompt Logic ---
+
+const installBtn = document.getElementById('install-pwa-btn');
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Verhindert, dass Chrome die Mini-Infobar anzeigt
+  e.preventDefault();
+  // Speichert das Event, damit es später ausgelöst werden kann
+  deferredPrompt = e;
+  // Zeigt unseren eigenen Installations-Button an
+  if (installBtn) {
+    installBtn.style.display = 'block';
+  }
+  console.log('`beforeinstallprompt` event was fired.');
+});
+
+if (installBtn) {
+  installBtn.addEventListener('click', async () => {
+    // Versteckt unseren Button
+    installBtn.style.display = 'none';
+    // Zeigt den Installations-Dialog an
+    deferredPrompt.prompt();
+    // Wartet auf die Antwort des Benutzers
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response to the install prompt: ${outcome}`);
+    // Wir können das Event nur einmal verwenden, also setzen wir es zurück
+    deferredPrompt = null;
+  });
+}
+
+window.addEventListener('appinstalled', () => {
+  // Versteckt den Installations-Button, falls die App auf anderem Wege installiert wird
+  if (installBtn) {
+    installBtn.style.display = 'none';
+  }
+  deferredPrompt = null;
+  console.log('PWA was installed');
+});
