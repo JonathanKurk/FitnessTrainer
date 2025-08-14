@@ -918,7 +918,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('sw.js')
+            // Hinzufügen von './' sagt dem Browser, im selben Ordner zu suchen
+            navigator.serviceWorker.register('./sw.js') // <--- DAS IST DIE KORREKTE ZEILE
                 .then(registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
