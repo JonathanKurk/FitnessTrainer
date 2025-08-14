@@ -903,13 +903,7 @@ durationSlider.addEventListener('input', () => {
 });
 
 // --- Initialization ---
-document.addEventListener('DOMContentLoaded', () => {
-    // Set initial duration display
-    durationValueDisplay.textContent = `${durationSlider.value} Min`;
-    renderWorkoutCards();
-});
-
-// --- PWA Service Worker Registration ---
+// WICHTIG: Der PWA-Registrierungscode ist jetzt hier drin
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial duration display
     durationValueDisplay.textContent = `${durationSlider.value} Min`;
@@ -918,8 +912,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // Hinzufügen von './' sagt dem Browser, im selben Ordner zu suchen
-            navigator.serviceWorker.register('./sw.js') // <--- DAS IST DIE KORREKTE ZEILE
+            navigator.serviceWorker.register('./sw.js')
                 .then(registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
