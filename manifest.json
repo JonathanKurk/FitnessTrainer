@@ -1,0 +1,23 @@
+{
+  "name": "Fitness Trainer Pro",
+  "short_name": "FitnessPro",
+  "description": "Ihr persönlicher Fitness Trainer für Workouts jederzeit und überall, auch offline.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
