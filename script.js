@@ -371,6 +371,7 @@ const exerciseExplanations = {
             'Drücke dich aus den Trizeps wieder nach oben.'
         ]
     },
+    // NEUE ERKLÄRUNGEN
     'Rudern am Tisch': {
         title: 'Rudern am Tisch (Inverted Row)',
         steps: [
@@ -903,7 +904,6 @@ durationSlider.addEventListener('input', () => {
 });
 
 // --- Initialization ---
-// WICHTIG: Der PWA-Registrierungscode ist jetzt hier drin
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial duration display
     durationValueDisplay.textContent = `${durationSlider.value} Min`;
@@ -924,7 +924,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- PWA Installation Prompt Logic ---
-
 const installBtn = document.getElementById('install-pwa-btn');
 let deferredPrompt;
 
