@@ -131,6 +131,9 @@ export const workouts = [
             { type: 'exercise', name: 'Diamond Push-ups (Wiederholung)', duration: 45, display: '45 Sekunden Diamond Push-ups. Gib alles im Finale!' }
         ]
     },
+
+    // --- 10 NEUE WORKOUTS ---
+
     {
         id: 'fullbody-intermediate',
         name: 'Ganzkörper Fortgeschritten',
@@ -162,7 +165,7 @@ export const workouts = [
             { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
             { type: 'exercise', name: 'Bicycle Crunches', duration: 60, display: '1 Minute Bicycle Crunches. Ellbogen zu gegenüberliegendem Knie.' },
             { type: 'rest', name: 'Längere Pause', duration: 40, display: '40 Sekunden Pause. Gut gemacht, dein Bauch brennt!' },
-            { type: 'exercise', name: 'Plank Jacks', duration: 45, display: '45 Sekunden Plank Jacks. Stabilität und Cardio für den Core.' },
+            { type: 'exercise', 'name': 'Plank Jacks', 'duration': 45, 'display': '45 Sekunden Plank Jacks. Stabilität und Cardio für den Core.' },
             { type: 'rest', name: 'Vorbereitung', duration: 30, display: '30 Sekunden Vorbereitung für die letzte Übung.' },
             { type: 'exercise', name: 'Plank mit Armheben', duration: 60, display: '60 Sekunden Plank mit Armheben. Halte den Rumpf super stabil.' }
         ]
@@ -240,6 +243,76 @@ export const workouts = [
             { type: 'exercise', name: 'Katze-Kuh Dehnung', duration: 90, display: '1:30 Minute Katze-Kuh Dehnung. Mache den Rücken geschmeidig.' },
             { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden Pause.' },
             { type: 'exercise', name: 'Kindeshaltung', duration: 120, display: '2 Minuten Kindeshaltung. Entspanne dich vollständig.' }
+        ]
+    },
+    {
+        id: 'quick-morning-boost',
+        name: '10-Minuten Morgen-Boost',
+        level: 'Anfänger',
+        target: 'Ganzkörper',
+        sequence: [
+            { type: 'exercise', name: 'Jumping Jacks', duration: 60, display: '60 Sekunden Hampelmänner, um den Kreislauf in Schwung zu bringen.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden durchatmen.' },
+            { type: 'exercise', name: 'Kniebeugen', duration: 60, display: '60 Sekunden saubere Kniebeugen.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Beine lockern.' },
+            { type: 'exercise', name: 'Liegestützen (auf Knien)', duration: 45, display: '45 Sekunden Liegestützen auf den Knien.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Arme schütteln.' },
+            { type: 'exercise', name: 'Plank', duration: 60, display: '60 Sekunden Plank halten.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Pause.' },
+            { type: 'exercise', name: 'Crunches', duration: 45, display: '45 Sekunden Crunches.' },
+            { type: 'rest', name: 'Cool Down', duration: 30, display: 'Kurzes Dehnen. Super Start in den Tag!' }
+        ]
+    },
+    {
+        id: 'stability-challenge',
+        name: 'Stabilitäts-Challenge',
+        level: 'Anfänger',
+        target: 'Ganzkörper',
+        sequence: [
+            { type: 'exercise', name: 'Plank', duration: 90, display: '90 Sekunden Unterarmstütz. Atme ruhig und halte die Spannung.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden Pause.' },
+            { type: 'exercise', name: 'Wand-Sitz', duration: 90, display: '90 Sekunden Wandsitz. Die Oberschenkel werden brennen!' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden Pause.' },
+            { type: 'exercise', name: 'Glute Bridge', duration: 90, display: '90 Sekunden Glute Bridge halten. Po fest anspannen.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Seiten-Plank (links)', duration: 60, display: '60 Sekunden Seitstütz links.' },
+            { type: 'exercise', name: 'Seiten-Plank (rechts)', duration: 60, display: '60 Sekunden Seitstütz rechts.' },
+            { type: 'rest', name: 'Erholung', duration: 60, display: 'Gut gemacht! Statische Übungen sind super für die Tiefenmuskulatur.' }
+        ]
+    },
+    {
+        id: 'abs-obliques-focus',
+        name: 'Fokus: Bauch & Seiten',
+        level: 'Fortgeschritten',
+        target: 'Bauch',
+        sequence: [
+            { type: 'exercise', name: 'Bicycle Crunches', duration: 60, display: '60 Sekunden Bicycle Crunches. Tempo halten!' },
+            { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
+            { type: 'exercise', name: 'Russischer Twist (ohne Gewicht)', duration: 60, display: '60 Sekunden Russian Twist. Füße vom Boden für mehr Intensität.' },
+            { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
+            { type: 'exercise', name: 'Seiten-Plank (links)', duration: 45, display: '45 Sekunden Seitstütz links mit Hüft-Dips.' },
+            { type: 'exercise', name: 'Seiten-Plank (rechts)', duration: 45, display: '45 Sekunden Seitstütz rechts mit Hüft-Dips.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Beinheben (flach)', duration: 60, display: '60 Sekunden langsames und kontrolliertes Beinheben.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Plank Shoulder Taps', duration: 60, display: '60 Sekunden Plank Shoulder Taps. Hüfte stabil halten!' }
+        ]
+    },
+    {
+        id: 'lower-body-burnout',
+        name: 'Bein-Burnout',
+        level: 'Fortgeschritten',
+        target: 'Beine',
+        sequence: [
+            { type: 'exercise', name: 'Kniebeugen', duration: 90, display: '90 Sekunden Kniebeugen. Achte auf Tiefe und Form.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 90, display: '90 Sekunden Ausfallschritte. Große, stabile Schritte.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Jump Squats', duration: 60, display: '60 Sekunden explosive Jump Squats.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden durchatmen!' },
+            { type: 'exercise', name: 'Wadenheben', duration: 90, display: '90 Sekunden Wadenheben. Langsam hoch, kurz halten, langsam runter.' },
+            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
+            { type: 'exercise', name: 'Wand-Sitz', duration: 90, display: 'Finale: 90 Sekunden Wandsitz. Halte durch!' }
         ]
     }
 ];
