@@ -131,9 +131,6 @@ export const workouts = [
             { type: 'exercise', name: 'Diamond Push-ups (Wiederholung)', duration: 45, display: '45 Sekunden Diamond Push-ups. Gib alles im Finale!' }
         ]
     },
-
-    // --- 10 NEUE WORKOUTS ---
-
     {
         id: 'fullbody-intermediate',
         name: 'Ganzkörper Fortgeschritten',
@@ -165,7 +162,7 @@ export const workouts = [
             { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
             { type: 'exercise', name: 'Bicycle Crunches', duration: 60, display: '1 Minute Bicycle Crunches. Ellbogen zu gegenüberliegendem Knie.' },
             { type: 'rest', name: 'Längere Pause', duration: 40, display: '40 Sekunden Pause. Gut gemacht, dein Bauch brennt!' },
-            { type: 'exercise', 'name': 'Plank Jacks', 'duration': 45, 'display': '45 Sekunden Plank Jacks. Stabilität und Cardio für den Core.' },
+            { type: 'exercise', name: 'Plank Jacks', duration: 45, display: '45 Sekunden Plank Jacks. Stabilität und Cardio für den Core.' },
             { type: 'rest', name: 'Vorbereitung', duration: 30, display: '30 Sekunden Vorbereitung für die letzte Übung.' },
             { type: 'exercise', name: 'Plank mit Armheben', duration: 60, display: '60 Sekunden Plank mit Armheben. Halte den Rumpf super stabil.' }
         ]
@@ -245,74 +242,167 @@ export const workouts = [
             { type: 'exercise', name: 'Kindeshaltung', duration: 120, display: '2 Minuten Kindeshaltung. Entspanne dich vollständig.' }
         ]
     },
+
+    // --- 5 NEUE LANGE WORKOUTS (20-60 MIN) ---
+
     {
-        id: 'quick-morning-boost',
-        name: '10-Minuten Morgen-Boost',
-        level: 'Anfänger',
-        target: 'Ganzkörper',
-        sequence: [
-            { type: 'exercise', name: 'Jumping Jacks', duration: 60, display: '60 Sekunden Hampelmänner, um den Kreislauf in Schwung zu bringen.' },
-            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden durchatmen.' },
-            { type: 'exercise', name: 'Kniebeugen', duration: 60, display: '60 Sekunden saubere Kniebeugen.' },
-            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Beine lockern.' },
-            { type: 'exercise', name: 'Liegestützen (auf Knien)', duration: 45, display: '45 Sekunden Liegestützen auf den Knien.' },
-            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Arme schütteln.' },
-            { type: 'exercise', name: 'Plank', duration: 60, display: '60 Sekunden Plank halten.' },
-            { type: 'rest', name: 'Pause', duration: 15, display: '15 Sekunden Pause.' },
-            { type: 'exercise', name: 'Crunches', duration: 45, display: '45 Sekunden Crunches.' },
-            { type: 'rest', name: 'Cool Down', duration: 30, display: 'Kurzes Dehnen. Super Start in den Tag!' }
-        ]
-    },
-    {
-        id: 'stability-challenge',
-        name: 'Stabilitäts-Challenge',
-        level: 'Anfänger',
-        target: 'Ganzkörper',
-        sequence: [
-            { type: 'exercise', name: 'Plank', duration: 90, display: '90 Sekunden Unterarmstütz. Atme ruhig und halte die Spannung.' },
-            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden Pause.' },
-            { type: 'exercise', name: 'Wand-Sitz', duration: 90, display: '90 Sekunden Wandsitz. Die Oberschenkel werden brennen!' },
-            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden Pause.' },
-            { type: 'exercise', name: 'Glute Bridge', duration: 90, display: '90 Sekunden Glute Bridge halten. Po fest anspannen.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Seiten-Plank (links)', duration: 60, display: '60 Sekunden Seitstütz links.' },
-            { type: 'exercise', name: 'Seiten-Plank (rechts)', duration: 60, display: '60 Sekunden Seitstütz rechts.' },
-            { type: 'rest', name: 'Erholung', duration: 60, display: 'Gut gemacht! Statische Übungen sind super für die Tiefenmuskulatur.' }
-        ]
-    },
-    {
-        id: 'abs-obliques-focus',
-        name: 'Fokus: Bauch & Seiten',
+        id: 'hiit-inferno-30',
+        name: 'Das 30-Minuten HIIT Inferno',
         level: 'Fortgeschritten',
-        target: 'Bauch',
+        target: 'Ganzkörper',
         sequence: [
-            { type: 'exercise', name: 'Bicycle Crunches', duration: 60, display: '60 Sekunden Bicycle Crunches. Tempo halten!' },
-            { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
-            { type: 'exercise', name: 'Russischer Twist (ohne Gewicht)', duration: 60, display: '60 Sekunden Russian Twist. Füße vom Boden für mehr Intensität.' },
-            { type: 'rest', name: 'Pause', duration: 20, display: '20 Sekunden Pause.' },
-            { type: 'exercise', name: 'Seiten-Plank (links)', duration: 45, display: '45 Sekunden Seitstütz links mit Hüft-Dips.' },
-            { type: 'exercise', name: 'Seiten-Plank (rechts)', duration: 45, display: '45 Sekunden Seitstütz rechts mit Hüft-Dips.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Beinheben (flach)', duration: 60, display: '60 Sekunden langsames und kontrolliertes Beinheben.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Plank Shoulder Taps', duration: 60, display: '60 Sekunden Plank Shoulder Taps. Hüfte stabil halten!' }
+            { type: 'exercise', name: 'Jumping Jacks', duration: 120, display: '2 Minuten leichtes Aufwärmen mit Hampelmännern.' },
+            { type: 'rest', name: 'Vorbereitung', duration: 30, display: 'Kurz durchatmen, Runde 1 beginnt.' },
+            // Runde 1
+            { type: 'exercise', name: 'Burpees', duration: 45, display: 'Runde 1: 45s Burpees. Gib dein Bestes!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'High Knees', duration: 45, display: 'Runde 1: 45s High Knees. Knie hoch!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 45, display: 'Runde 1: 45s Mountain Climbers. Tempo!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Jump Squats', duration: 45, display: 'Runde 1: 45s Jump Squats. Explosiv!' },
+            { type: 'rest', name: 'Rundenpause', duration: 60, display: 'Gute Arbeit! 1 Minute Pause vor Runde 2.' },
+            // Runde 2
+            { type: 'exercise', name: 'Burpees', duration: 45, display: 'Runde 2: 45s Burpees. Bleib dran!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'High Knees', duration: 45, display: 'Runde 2: 45s High Knees.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 45, display: 'Runde 2: 45s Mountain Climbers.' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Jump Squats', duration: 45, display: 'Runde 2: 45s Jump Squats.' },
+            { type: 'rest', name: 'Rundenpause', duration: 60, display: 'Stark! 1 Minute Pause vor der letzten Runde.' },
+            // Runde 3
+            { type: 'exercise', name: 'Burpees', duration: 45, display: 'Runde 3: 45s Burpees. Letztes Mal!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'High Knees', duration: 45, display: 'Runde 3: 45s High Knees. Finale!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 45, display: 'Runde 3: 45s Mountain Climbers. Alles geben!' },
+            { type: 'rest', name: 'Pause', duration: 15, display: '15s Pause.' },
+            { type: 'exercise', name: 'Jump Squats', duration: 45, display: 'Runde 3: 45s Jump Squats. Zieh durch!' },
+            { type: 'rest', name: 'Pause', duration: 60, display: 'Fast geschafft! Bereite dich auf den Core-Finisher vor.' },
+            // Finisher & Cool Down
+            { type: 'exercise', name: 'Plank', duration: 90, display: 'Finisher: 90 Sekunden Plank halten.' },
+            { type: 'exercise', name: 'Kindeshaltung', duration: 120, display: 'Cool Down: 2 Minuten entspannen in der Kindeshaltung. Du hast es dir verdient!' }
         ]
     },
     {
-        id: 'lower-body-burnout',
-        name: 'Bein-Burnout',
+        id: 'total-body-strength-25',
+        name: 'Total Body Kraft & Ausdauer',
+        level: 'Anfänger',
+        target: 'Ganzkörper',
+        sequence: [
+            { type: 'exercise', name: 'Jumping Jacks', duration: 120, display: '2 Minuten leichtes Aufwärmen.' },
+            { type: 'rest', name: 'Vorbereitung', duration: 30, display: 'Bereit für Runde 1.' },
+            // Runde 1
+            { type: 'exercise', name: 'Kniebeugen', duration: 90, display: 'Runde 1: 90s Kniebeugen. Langsam und kontrolliert.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Liegestützen (auf Knien)', duration: 90, display: 'Runde 1: 90s Liegestützen auf Knien. Konzentrier dich auf die Form.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Glute Bridge', duration: 90, display: 'Runde 1: 90s Glute Bridge. Po anspannen.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Plank', duration: 90, display: 'Runde 1: 90s Plank. Halte durch.' },
+            { type: 'rest', name: 'Rundenpause', duration: 90, display: 'Super! 90 Sekunden Pause, dann wiederholen wir das Ganze.' },
+            // Runde 2
+            { type: 'exercise', name: 'Kniebeugen', duration: 90, display: 'Runde 2: 90s Kniebeugen. Die zweite Runde ist immer für die Stärke.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Liegestützen (auf Knien)', duration: 90, display: 'Runde 2: 90s Liegestützen. Du schaffst das!' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Glute Bridge', duration: 90, display: 'Runde 2: 90s Glute Bridge. Spür die Aktivierung.' },
+            { type: 'rest', name: 'Pause', duration: 45, display: '45s Pause.' },
+            { type: 'exercise', name: 'Plank', duration: 90, display: 'Runde 2: 90s Plank. Das Finale!' },
+            { type: 'rest', name: 'Cool Down', duration: 120, display: 'Fantastisch! 2 Minuten dehnen und entspannen.' }
+        ]
+    },
+    {
+        id: 'leg-pyramid-challenge-25',
+        name: 'Pyramiden-Challenge Beine & Po',
         level: 'Fortgeschritten',
         target: 'Beine',
         sequence: [
-            { type: 'exercise', name: 'Kniebeugen', duration: 90, display: '90 Sekunden Kniebeugen. Achte auf Tiefe und Form.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 90, display: '90 Sekunden Ausfallschritte. Große, stabile Schritte.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Jump Squats', duration: 60, display: '60 Sekunden explosive Jump Squats.' },
-            { type: 'rest', name: 'Pause', duration: 45, display: '45 Sekunden durchatmen!' },
-            { type: 'exercise', name: 'Wadenheben', duration: 90, display: '90 Sekunden Wadenheben. Langsam hoch, kurz halten, langsam runter.' },
-            { type: 'rest', name: 'Pause', duration: 30, display: '30 Sekunden Pause.' },
-            { type: 'exercise', name: 'Wand-Sitz', duration: 90, display: 'Finale: 90 Sekunden Wandsitz. Halte durch!' }
+            { type: 'exercise', name: 'Kniebeugen', duration: 120, display: '2 Minuten Warm-up: Lockere Kniebeugen und Beinschwingen.' },
+            { type: 'rest', name: 'Vorbereitung', duration: 30, display: 'Die erste Pyramide startet: Kniebeugen.' },
+            // Pyramide 1: Kniebeugen
+            { type: 'exercise', name: 'Kniebeugen', duration: 30, display: '30 Sekunden Belastung.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Kniebeugen', duration: 45, display: '45 Sekunden Belastung.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Kniebeugen', duration: 60, display: 'Spitze der Pyramide: 60 Sekunden!' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Kniebeugen', duration: 45, display: 'Der Weg nach unten: 45 Sekunden.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Kniebeugen', duration: 30, display: 'Letzte Stufe: 30 Sekunden.' },
+            { type: 'rest', name: 'Lange Pause', duration: 90, display: 'Pyramide 1 geschafft! 90s Pause, dann Ausfallschritte.' },
+            // Pyramide 2: Ausfallschritte
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 30, display: '30 Sekunden Belastung.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 45, display: '45 Sekunden Belastung.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 60, display: 'Spitze der Pyramide: 60 Sekunden!' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 45, display: 'Der Weg nach unten: 45 Sekunden.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 30, display: 'Letzte Stufe: 30 Sekunden.' },
+            { type: 'rest', name: 'Lange Pause', duration: 90, display: 'Sehr gut! 90s Pause, dann der Finisher.' },
+            // Finisher
+            { type: 'exercise', name: 'Wand-Sitz', duration: 120, display: 'Finisher: 2 Minuten Wandsitz. Halte durch, bis es brennt!' },
+            { type: 'rest', name: 'Cool Down', duration: 120, display: 'Beine ausschütteln und dehnen. Du hast es geschafft!' }
+        ]
+    },
+    {
+        id: 'endurance-flow-45',
+        name: 'Der 45-Minuten Ausdauer-Flow',
+        level: 'Anfänger',
+        target: 'Ganzkörper',
+        sequence: [
+            { type: 'exercise', name: 'Sonnengruß', duration: 180, display: '3 Minuten sanfter Sonnengruß zum Aufwärmen.' },
+            { type: 'rest', name: 'Pause', duration: 60, display: 'Bereit für den Ausdauerteil.' },
+            { type: 'exercise', name: 'Jumping Jacks', duration: 180, display: '3 Minuten Hampelmänner. Finde ein gleichmäßiges Tempo.' },
+            { type: 'rest', name: 'Aktive Pause', duration: 60, display: '1 Minute lockeres Gehen auf der Stelle.' },
+            { type: 'exercise', name: 'Kniebeugen', duration: 180, display: '3 Minuten Kniebeugen. Es geht nicht um Geschwindigkeit, sondern um Durchhalten.' },
+            { type: 'rest', name: 'Aktive Pause', duration: 60, display: '1 Minute lockeres Gehen auf der Stelle.' },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 180, display: '3 Minuten Mountain Climbers. Langsam und kontrolliert oder schnell - dein Tempo!' },
+            { type: 'rest', name: 'Aktive Pause', duration: 60, display: '1 Minute lockeres Gehen auf der Stelle.' },
+            { type: 'exercise', name: 'Plank', duration: 180, display: '3 Minuten Plank. Atme und halte die Spannung. Setze bei Bedarf kurz ab.' },
+            { type: 'rest', name: 'Aktive Pause', duration: 60, display: '1 Minute lockeres Gehen auf der Stelle.' },
+            { type: 'exercise', name: 'Ausfallschritte (alternierend)', duration: 180, display: '3 Minuten Ausfallschritte. Saubere Technik ist wichtiger als Tempo.' },
+            { type: 'rest', name: 'Aktive Pause', duration: 60, display: '1 Minute lockeres Gehen auf der Stelle.' },
+            { type: 'exercise', name: 'Burpees', duration: 180, display: '3 Minuten Burpees. Finde einen Rhythmus, den du halten kannst.' },
+            { type: 'rest', name: 'Cool Down', duration: 180, display: 'Hervorragend! 3 Minuten Stretching. Fokus auf Beine, Brust und Rücken.' }
+        ]
+    },
+    {
+        id: 'full-hour-journey-60',
+        name: 'Die 60-Minuten Fitness-Reise',
+        level: 'Fortgeschritten',
+        target: 'Ganzkörper',
+        sequence: [
+            // 1. Warm-Up (5 min)
+            { type: 'exercise', name: 'Jumping Jacks', duration: 180, display: 'Warm-Up Teil 1: 3 Minuten Hampelmänner.' },
+            { type: 'exercise', name: 'High Knees', duration: 120, display: 'Warm-Up Teil 2: 2 Minuten High Knees.' },
+            { type: 'rest', name: 'Pause', duration: 60, display: 'Warm-Up geschafft. Jetzt kommt der Cardio-Block.' },
+            // 2. Cardio (15 min)
+            { type: 'exercise', name: 'Burpees', duration: 60, display: 'Cardio-Runde 1/3: 60s Burpees.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 60, display: 'Cardio-Runde 1/3: 60s Mountain Climbers.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Sprung Ausfallschritte', duration: 60, display: 'Cardio-Runde 1/3: 60s Sprung Ausfallschritte.' }, { type: 'rest', name: 'Rundenpause', duration: 60 },
+            { type: 'exercise', name: 'Burpees', duration: 60, display: 'Cardio-Runde 2/3: 60s Burpees.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 60, display: 'Cardio-Runde 2/3: 60s Mountain Climbers.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Sprung Ausfallschritte', duration: 60, display: 'Cardio-Runde 2/3: 60s Sprung Ausfallschritte.' }, { type: 'rest', name: 'Rundenpause', duration: 60 },
+            { type: 'exercise', name: 'Burpees', duration: 60, display: 'Cardio-Runde 3/3: 60s Burpees.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Mountain Climbers', duration: 60, display: 'Cardio-Runde 3/3: 60s Mountain Climbers.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Sprung Ausfallschritte', duration: 60, display: 'Cardio-Runde 3/3: 60s Sprung Ausfallschritte.' },
+            { type: 'rest', name: 'Pause', duration: 90, display: 'Cardio geschafft! Trink was. Jetzt kommt der Oberkörper-Kraftteil.' },
+            // 3. Upper Body Strength (15 min)
+            { type: 'exercise', name: 'Standard-Liegestützen', duration: 90, display: 'Kraft OK 1/3: 90s Liegestützen. So viele saubere Wiederholungen wie möglich.' }, { type: 'rest', name: 'Pause', duration: 60 },
+            { type: 'exercise', name: 'Rudern am Tisch', duration: 90, display: 'Kraft OK 1/3: 90s Rudern am Tisch.' }, { type: 'rest', name: 'Pause', duration: 60 },
+            { type: 'exercise', name: 'Pike Push-ups', duration: 90, display: 'Kraft OK 1/3: 90s Pike Push-ups für die Schultern.' }, { type: 'rest', name: 'Rundenpause', duration: 90 },
+            { type: 'exercise', name: 'Standard-Liegestützen', duration: 90, display: 'Kraft OK 2/3: 90s Liegestützen.' }, { type: 'rest', name: 'Pause', duration: 60 },
+            { type: 'exercise', name: 'Rudern am Tisch', duration: 90, display: 'Kraft OK 2/3: 90s Rudern am Tisch.' }, { type: 'rest', name: 'Pause', duration: 60 },
+            { type: 'exercise', name: 'Pike Push-ups', duration: 90, display: 'Kraft OK 2/3: 90s Pike Push-ups.' },
+            { type: 'rest', name: 'Pause', duration: 90, display: 'Oberkörper erledigt. Jetzt sind die Beine dran.' },
+            // 4. Lower Body Strength (10 min)
+            { type: 'exercise', name: 'Bulgarian Split Squats (links)', duration: 90, display: 'Kraft Beine: 90s Bulgarian Split Squats links.' }, { type: 'rest', name: 'Pause', duration: 30 },
+            { type: 'exercise', name: 'Bulgarian Split Squats (rechts)', duration: 90, display: 'Kraft Beine: 90s Bulgarian Split Squats rechts.' }, { type: 'rest', name: 'Pause', duration: 60 },
+            { type: 'exercise', name: 'Glute Bridge', duration: 120, display: 'Kraft Beine: 2 Minuten Glute Bridges. Langsam und mit voller Anspannung.' },
+            { type: 'rest', name: 'Pause', duration: 90, display: 'Beine brennen! Zum Abschluss der Core.' },
+            // 5. Core Finisher (5 min)
+            { type: 'exercise', name: 'V-Ups', duration: 60, display: 'Core Finisher: 60s V-Ups.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Bicycle Crunches', duration: 60, display: 'Core Finisher: 60s Bicycle Crunches.' }, { type: 'rest', name: 'Pause', duration: 15 },
+            { type: 'exercise', name: 'Plank', duration: 120, display: 'Core Finisher: 2 Minuten Plank halten. Das Finale!' },
+            // 6. Cool Down (5 min)
+            { type: 'exercise', name: 'Katze-Kuh Dehnung', duration: 120, display: 'Cool Down: 2 Minuten Katze-Kuh für den Rücken.' },
+            { type: 'exercise', name: 'Kindeshaltung', duration: 180, display: 'Cool Down: 3 Minuten in der Kindeshaltung entspannen. Du hast es geschafft!' }
         ]
     }
 ];
