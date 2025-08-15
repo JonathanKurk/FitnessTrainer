@@ -371,7 +371,6 @@ const exerciseExplanations = {
             'Drücke dich aus den Trizeps wieder nach oben.'
         ]
     },
-    // NEUE ERKLÄRUNGEN
     'Rudern am Tisch': {
         title: 'Rudern am Tisch (Inverted Row)',
         steps: [
